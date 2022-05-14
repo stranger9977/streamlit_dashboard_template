@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import plost
 from PIL import Image
+from draft_analyzer import final_df
 
 # Page setting
 st.set_page_config(layout="wide")
@@ -11,7 +12,7 @@ with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Data
-seattle_weather = pd.read_csv('https://raw.githubusercontent.com/tvst/plost/master/data/seattle-weather.csv', parse_dates=['date'])
+Market_values = final_df
 stocks = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/stocks_toy.csv')
 
 # Row A
